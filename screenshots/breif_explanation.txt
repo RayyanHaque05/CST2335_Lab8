@@ -1,4 +1,4 @@
-================================================================================
+
 CST2335 - Graphical Interface Programming (Lab 8)
 SCREENSHOT EXPLANATIONS & TEST CASE VERIFICATIONS
 ================================================================================
@@ -7,52 +7,26 @@ Screenshot 1: 1_home.jpeg
 --------------------------------------------------------------------------------
 Description:
 This screenshot displays the initial launch of the application (MainActivity).
-It verifies:
-1. Custom Toolbar: The default ActionBar has been replaced with our standalone
-   androidx.appcompat.widget.Toolbar via themes.xml (windowActionBar=false,
-   windowNoTitle=true).
-2. Action Icons: Two distinct clickable icons (Choice 1 Star and Choice 2 Heart)
-   appear on the right side of the toolbar (app:showAsAction="always").
-3. Hamburger Menu: The navigation drawer toggle icon is visible on the top-left
-   of the toolbar, ready to open the side menu.
-4. Main Content: Clean Material card layout presenting the lab features and testing
-   instructions.
 
 
 Screenshot 2: 2.1_toast.jpeg
 --------------------------------------------------------------------------------
 Description:
 This screenshot demonstrates event handling for the first toolbar action item.
-It verifies:
-1. When the user taps the first icon (Choice 1 / Star icon) in the Toolbar,
-   the onOptionsItemSelected() handler intercepts item ID R.id.action_item1.
-2. A short Toast message appears at the bottom of the screen with the exact
-   required text: "You clicked on item 1".
 
 
 Screenshot 3: 2.2_toast.jpeg
 --------------------------------------------------------------------------------
 Description:
 This screenshot demonstrates event handling for the second toolbar action item.
-It verifies:
-1. When the user taps the second icon (Choice 2 / Heart icon) in the Toolbar,
-   the onOptionsItemSelected() handler intercepts item ID R.id.action_item2.
-2. A short Toast message appears at the bottom of the screen with the exact
-   required text: "You clicked on item 2".
+
 
 
 Screenshot 4: 3_drawer.jpeg
 --------------------------------------------------------------------------------
 Description:
 This screenshot shows the Navigation Drawer opened via the hamburger icon.
-It verifies:
-1. The DrawerLayout smoothly slides out the NavigationView from the start/left edge.
-2. The custom drawer header (nav_header.xml) is displayed with the application icon
-   and title.
-3. The menu items defined in nav_drawer_menu.xml are listed with proper icons:
-   - "Home": Navigates back to MainActivity.
-   - "Dad Joke": Navigates to the DadJoke activity.
-   - "Exit": Calls finishAffinity() to close all open activities and exit the app.
+
 
 
 Screenshot 5: 4_dad_joke.jpeg
@@ -60,26 +34,6 @@ Screenshot 5: 4_dad_joke.jpeg
 Description:
 This screenshot shows the DadJoke activity screen after selecting "Dad Joke"
 from the Navigation Drawer.
-It verifies:
-1. Code Reusability (BaseActivity): The DadJoke activity extends BaseActivity,
-   inheriting the exact same Toolbar and Navigation Drawer without duplicating code.
-2. Toolbar Title: The Toolbar title updates cleanly to "Dad Joke".
-3. Content Display: A funny Dad Joke is rendered prominently in a centered
-   TextView within a clean Material card:
-   "Why don't skeletons fight each other? Because they don't have the guts!"
 
 
-================================================================================
-RUBRIC COMPLIANCE SUMMARY (10/10 Points)
-================================================================================
-- The app compiles and runs without crashing [2/2]:
-  Verified. Clean AndroidX and Material architecture running smoothly.
-- Toolbar appears with two icons [2/2]:
-  Verified in 1_home.jpeg (Choice 1 and Choice 2 icons).
-- Selecting items in toolbar show correct Toast message [2/2]:
-  Verified in 2.1_toast.jpeg ("You clicked on item 1") and 2.2_toast.jpeg ("You clicked on item 2").
-- User can open a NavigationDrawer [2/2]:
-  Verified in 3_drawer.jpeg (Drawer opened via hamburger icon with 3 items).
-- Selecting items in NavigationDrawer take you to proper activity [2/2]:
-  Verified in 4_dad_joke.jpeg (Navigated to DadJoke screen with Dad Joke in TextView).
-================================================================================
+
